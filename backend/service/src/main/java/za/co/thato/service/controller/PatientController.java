@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.co.thato.domain.enitity.Patient;
 import za.co.thato.service.dto.PatientDTO;
+import za.co.thato.service.service.patient.PatientServiceImpl;
 
 import javax.validation.Valid;
 
