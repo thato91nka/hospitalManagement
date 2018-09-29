@@ -1,8 +1,9 @@
-package za.co.thato.service.service;
+package za.co.thato.service.service.patient;
 
-import java.util.List;
 import za.co.thato.domain.enitity.Patient;
 import za.co.thato.service.dto.PatientDTO;
+
+import java.util.List;
 
 public interface PatientService {
 
@@ -10,7 +11,7 @@ public interface PatientService {
 
   PatientDTO findPatient(long idNumber);
 
-  PatientDTO updatePatient(long idNumber,Patient patient);
+  PatientDTO updatePatient(long idNumber, Patient patient);
 
   PatientDTO createPatient(Patient patient);
 

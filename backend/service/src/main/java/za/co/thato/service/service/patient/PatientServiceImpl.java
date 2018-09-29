@@ -1,6 +1,4 @@
-package za.co.thato.service.service;
-
-import java.util.List;
+package za.co.thato.service.service.patient;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -9,6 +7,8 @@ import org.springframework.stereotype.Service;
 import za.co.thato.domain.enitity.Patient;
 import za.co.thato.domain.repository.PatientRepository;
 import za.co.thato.service.dto.PatientDTO;
+
+import java.util.List;
 
 @Service
 public class PatientServiceImpl implements PatientService {
