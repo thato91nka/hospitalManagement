@@ -16,7 +16,7 @@ public class ProcedureImpl implements ProcedureService {
     }
 
     @Override
-    public Procedure getProceure(String name) {
+    public Procedure getProcedure(String name) {
         return null;
     }
 }

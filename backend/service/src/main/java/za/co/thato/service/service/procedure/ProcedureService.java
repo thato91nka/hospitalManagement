@@ -7,5 +7,5 @@ import java.util.List;
 public interface ProcedureService {
     Procedure addProcedure(Procedure procedure);
     List<Procedure> getProcedures();
-    Procedure getProceure(String name);
+    Procedure getProcedure(String name);
 }
