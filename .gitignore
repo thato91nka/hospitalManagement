@@ -1,0 +1,4 @@
+/target/
+/wfs-data/datastore/*_wfs-working-copy.csv
+.idea
+.classpath
