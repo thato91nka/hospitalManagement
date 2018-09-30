@@ -1,8 +1,9 @@
 package za.co.thato.domain.enitity;
 
-import javax.persistence.*;
-
 import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 
 @Entity

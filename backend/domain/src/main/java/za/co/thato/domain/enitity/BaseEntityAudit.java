@@ -1,15 +1,10 @@
 package za.co.thato.domain.enitity;
 
-import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.EntityListeners;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.Size;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
+import javax.validation.constraints.Size;
+import java.util.Date;
 
 /**
  * Created by A222186 on 2018/08/29.

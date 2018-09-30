@@ -1,11 +1,12 @@
 package za.co.thato.service.service.procedure;
 
 import za.co.thato.domain.enitity.Procedure;
+import za.co.thato.service.dto.ProcedureDTO;
 
 import java.util.List;
 
 public interface ProcedureService {
-    Procedure addProcedure(Procedure procedure);
-    List<Procedure> getProcedures();
-    Procedure getProcedure(String name);
+    ProcedureDTO addProcedure(Procedure procedure, Long patientID, String emplNum);
+    List<ProcedureDTO> getProcedures();
+    ProcedureDTO getProcedure(String name);
 }

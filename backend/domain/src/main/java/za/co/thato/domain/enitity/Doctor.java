@@ -2,6 +2,7 @@ package za.co.thato.domain.enitity;
 
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -11,8 +12,9 @@ import javax.persistence.Table;
 public class Doctor extends BaseEntityAudit {
     private String name;
     private String speciality;
-    private String mobile;
+    private String cell;
     private String email;
+    @Column(unique=true)
     private String employeeNum;
 
 }

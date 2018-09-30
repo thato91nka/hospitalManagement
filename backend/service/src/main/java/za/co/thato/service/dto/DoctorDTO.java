@@ -6,6 +6,7 @@ import lombok.Data;
 public class DoctorDTO {
     private String name;
     private String speciality;
-    private String mobile;
+    private String cell;
     private String email;
+    private String employeeNum;
 }
