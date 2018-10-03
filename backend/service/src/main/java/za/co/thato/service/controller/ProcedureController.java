@@ -15,7 +15,6 @@ public class ProcedureController {
 
     @PostMapping("/procedure/{id}/{emplNum}")
     public ProcedureDTO create(@RequestBody Procedure procedure, @PathVariable Long id, @PathVariable String emplNum) {
-
         return procedureService.addProcedure(procedure,id,emplNum);
     }
 }

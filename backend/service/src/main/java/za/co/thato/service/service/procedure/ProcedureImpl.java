@@ -11,6 +11,7 @@ import za.co.thato.domain.repository.PatientRepository;
 import za.co.thato.domain.repository.ProcedureRepository;
 import za.co.thato.service.dto.ProcedureDTO;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -35,16 +36,8 @@ public class ProcedureImpl implements ProcedureService {
         Doctor doctor = doctorRepository.findByEmployeeNum(emplNum);
         procedure.setDoctor(doctor);
         Procedure pro = procedureRepository.save(procedure);
+        procedure.setDate(new Date());
        return mapper.map(pro,ProcedureDTO.class);
     }
 
-    @Override
-    public List<ProcedureDTO> getProcedures() {
-        return null;
-    }
-
-    @Override
-    public ProcedureDTO getProcedure(String name) {
-        return null;
-    }
 }

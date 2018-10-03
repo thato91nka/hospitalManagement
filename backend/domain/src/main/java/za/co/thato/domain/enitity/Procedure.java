@@ -11,7 +11,6 @@ import java.util.Date;
 @Data
 public class Procedure extends BaseEntityAudit {
 
-    @Column(unique=true)
     private String name;
     private String cost;
     private String type;

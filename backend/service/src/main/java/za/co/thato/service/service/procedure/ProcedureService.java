@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface ProcedureService {
     ProcedureDTO addProcedure(Procedure procedure, Long patientID, String emplNum);
-    List<ProcedureDTO> getProcedures();
-    ProcedureDTO getProcedure(String name);
+
 }

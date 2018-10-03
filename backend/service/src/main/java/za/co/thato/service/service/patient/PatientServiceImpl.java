@@ -5,8 +5,11 @@ import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.co.thato.domain.enitity.Patient;
+import za.co.thato.domain.enitity.Procedure;
 import za.co.thato.domain.repository.PatientRepository;
+import za.co.thato.domain.repository.ProcedureRepository;
 import za.co.thato.service.dto.PatientDTO;
+import za.co.thato.service.dto.ProcedureDTO;
 
 import java.util.List;
 
@@ -18,6 +21,9 @@ public class PatientServiceImpl implements PatientService {
 
     @Autowired
     ModelMapper mapper;
+
+    @Autowired
+    ProcedureRepository procedureRepository;
 
 
     @Override
@@ -36,7 +42,7 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public PatientDTO updatePatient(long id,Patient patientDetails) {
+    public PatientDTO updatePatient(long id, Patient patientDetails) {
         Patient patient = patientRepository.findByIdNumber(id);
         patient.setEmail(patientDetails.getEmail());
         patient.setCellNumber(patientDetails.getCellNumber());
@@ -47,6 +53,15 @@ public class PatientServiceImpl implements PatientService {
     public PatientDTO createPatient(Patient patient) {
         Patient save = patientRepository.save(patient);
         return mapper.map(save, PatientDTO.class);
+    }
+
+    @Override
+    public List<ProcedureDTO> performedProcedures(long idNumber) {
+        Patient patient = patientRepository.findByIdNumber(idNumber);
+        List<Procedure> allByPatient = procedureRepository.findAllByPatient(patient);
+        java.lang.reflect.Type targetListType = new TypeToken<List<ProcedureDTO>>() {
+        }.getType();
+        return mapper.map(allByPatient, targetListType);
     }
 }
 
