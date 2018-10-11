@@ -17,9 +17,7 @@ public class Patient extends BaseEntityAudit {
   private String surname;
   private String cellNumber;
   private String email;
-  @NotNull
   private String bloodType;
-
   @Column(unique=true)
   private long idNumber;
 

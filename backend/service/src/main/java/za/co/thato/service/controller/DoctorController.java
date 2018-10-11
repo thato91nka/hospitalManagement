@@ -30,4 +30,9 @@ public class DoctorController {
         return doctorService.createDoctor(doctor);
     }
 
+    @GetMapping("/doctor")
+    public List<DoctorDTO> getAllPatients() {
+        return doctorService.findAll();
+    }
+
 }
